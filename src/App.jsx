@@ -1,8 +1,14 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-
-function App() {}
+import { Route, Router, BrowserRouter, } from "react-router-dom";
+import WelcomeScreen from "./components/welcomeScreen/welcomescreen";
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div className="main-app">
+        <Route path="/" Component={WelcomeScreen} />
+      </div>
+    </BrowserRouter>
+  );
+};
 
 export default App;
